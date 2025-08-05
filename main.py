@@ -26,7 +26,7 @@ def random_pokemon():
             weight = new_data["weight"]
             height = new_data["height"]
             sprite = new_data["sprites"]["front_default"]
-            return render_template("pokemon.html", name=name, weight=weight, height=height, sprite=sprite)
+            return render_template("pokemon.html", name=name, weight=weight // 10, height=height // 10, sprite=sprite)
         else:
             return "Failed to get specific Pokemon data"            
     else:
